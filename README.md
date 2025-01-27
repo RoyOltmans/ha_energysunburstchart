@@ -27,8 +27,8 @@ mv plotly-2.35.2.min.js /config/www/plotly.min.js
 Download the custom Sunburst card and place it in the `www` directory of your Home Assistant configuration:
 
 ```bash
-wget https://raw.githubusercontent.com/RoyOltmans/ha_sunburstchart/refs/heads/main/sunburst-chart-card.js
-mv sunburst-chart-card.js /config/www/sunburst-chart-card.js
+wget https://raw.githubusercontent.com/RoyOltmans/ha_energysunburstchart/refs/heads/main/energy-sunburst-card.js
+mv sunburst-chart-card.js /config/www/energy-sunburst-card.js
 ```
 
 ### 3. Configure Lovelace Resources
@@ -36,7 +36,7 @@ Add the custom card as a resource in your `ui-lovelace.yaml` file:
 
 ```yaml
 resources:
-  - url: /local/sunburst-chart-card.js
+  - url: /local/energy-sunburst-card.js
     type: module
 ```
 
@@ -88,11 +88,8 @@ data:
 ```
 
 ### 5. Restart Home Assistant
-Restart Home Assistant to apply the changes:
 
-```bash
-ha core restart
-```
+Restart Home Assistant to apply the changes.
 
 ## Disclaimer
 
