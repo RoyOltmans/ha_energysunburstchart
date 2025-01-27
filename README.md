@@ -49,6 +49,42 @@ data:
   labels: ["Total Energy", "Solar", "Wind", "Grid", "Household", "Lighting", "Heating"]
   parents: ["", "Total Energy", "Total Energy", "Total Energy", "Grid", "Household", "Household"]
   values: [100, 40, 20, 30, 10, 6, 4]
+
+OR
+
+type: custom:energy-sunburst-card
+data:
+  labels:
+    - Total Energy
+    - Solar
+    - Wind
+    - Grid
+    - Household
+    - Lighting
+    - Heating
+    - Cooling
+    - Battery
+  parents:
+    - ""
+    - Total Energy
+    - Total Energy
+    - Total Energy
+    - Grid
+    - Household
+    - Household
+    - Household
+    - Total Energy
+  values:
+    - 1010
+    - 402
+    - 202
+    - 304
+    - 151
+    - 51
+    - 51
+    - 40
+    - 10
+
 ```
 
 ### 5. Restart Home Assistant
