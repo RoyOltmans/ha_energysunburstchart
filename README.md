@@ -8,7 +8,7 @@ This project provides a custom Home Assistant card that visualizes hierarchical 
 - Offers a clean and modern integration with Home Assistant.
 - Customizable color schemes for energy categories.
 
-![preview](https://raw.githubusercontent.com/RoyOltmans/ha_sunburstchart/refs/heads/main/sunburst.png)
+![preview](/images/preview.png)
 
 ## Requirements
 - **Home Assistant** with Lovelace UI.
