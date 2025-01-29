@@ -46,14 +46,6 @@ Add the card to your Home Assistant dashboard with a configuration that suits yo
 ```yaml
 type: custom:energy-sunburst-card
 data:
-  labels: ["Total Energy", "Solar", "Wind", "Grid", "Household", "Lighting", "Heating"]
-  parents: ["", "Total Energy", "Total Energy", "Total Energy", "Grid", "Household", "Household"]
-  values: [100, 40, 20, 30, 10, 6, 4]
-
-OR
-
-type: custom:energy-sunburst-card
-data:
   labels:
     - Total Energy
     - Solar
@@ -84,6 +76,17 @@ data:
     - 51
     - 40
     - 10
+  energycolors:
+    Solar: "#FFD700"
+    Wind: "#87CEEB"
+    Grid: "#FF6347"
+    Battery: "#32CD32"
+    Other: "#8A2BE2"
+    Household: "#FFA07A"
+    Lighting: "#FFDAB9"
+    Heating: "#FF4500"
+    Cooling: "#000000"
+
 
 ```
 
