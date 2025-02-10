@@ -8,11 +8,12 @@ This project provides a custom Home Assistant card that visualizes hierarchical 
 - Offers a clean and modern integration with Home Assistant.
 - Customizable color schemes for energy categories.
 
-## Update 2.3.4
+## Update 2.3.5
  - Added state values as values in the grid, so everything is dynamic and not static
  - Added kWh unit
  - Added transparant background
  - Debug several issues
+ - Polished code Fixed following HA styling, transparancy, dark and light theme's
 
 ![preview](/images/preview.png)
 
