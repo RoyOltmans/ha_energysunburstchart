@@ -84,8 +84,8 @@ class EnergySunburstCard extends HTMLElement {
     const layout = {
       margin: { t: 0, l: 0, r: 0, b: 0 },
       uniformtext: { minsize: 10, mode: "hide" },
-      paper_bgcolor: "rgba(0,0,0,0)",
-      plot_bgcolor: "rgba(0,0,0,0)",
+      paper_bgcolor: "rgba(255, 255, 255, 0.05)", // Match Home Assistant's theme
+      plot_bgcolor: "rgba(255, 255, 255, 0.05)", // Ensure background consistency
 	  transition: {
         duration: 200,
         easing: "cubic-in-out",
@@ -173,16 +173,18 @@ class EnergySunburstCard extends HTMLElement {
     this.shadowRoot.innerHTML = `
       <style>
         .sunburst-container {
-          width: 100%;
-          height: 100%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          position: relative;
-          overflow: hidden;
-          background-color: transparent;
-          border-radius: 12px;
-          box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+		  background: var(--ha-card-background, var(--card-background-color, #fff));
+  		  backdrop-filter: none; /* Ensure no transparent blur effect */
+  		  box-shadow: none; /* Remove unwanted glow */
+  		  box-sizing: border-box;
+  		  border-radius: var(--ha-card-border-radius,12px);
+		  border-width: var(--ha-card-border-width,1px);
+		  border: var(--ha-card-border-width, 1px) solid var(--ha-card-border-color, var(--divider-color, #e0e0e0));
+  		  color: var(--primary-text-color);
+  		  display: block;
+  		  transition: all 0.3s ease-out;
+  		  position: relative;
+		  border-style: solid;
         }
 
         #chart {
@@ -212,7 +214,7 @@ class EnergySunburstCard extends HTMLElement {
       </style>
       <div class="sunburst-container">
         <div id="chart"></div>
-        <div class="version-label">Version 2.3.4</div>
+        <div class="version-label">Version 2.3.5</div>
       </div>
     `;
 
