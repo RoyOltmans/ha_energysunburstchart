@@ -140,7 +140,7 @@ Example sensor template For total energy Solar plus grid:
 
 Example sensor template for average energy via fossil fuel:
 ```yaml
-{{(states('sensor.consumed_and_produced_energy_grid') | int) * (states('sensor.average_grid_fossil_fuel_percentage') | int /100)}}
+{{(states('sensor.consumed_and_produced_energy_grid') | float(0,0)) * (states('sensor.average_grid_fossil_fuel_percentage') | float(0,0) /100)}}
 ```
 IMPORTANT: For an average sensor you will need an extra custom integration https://github.com/Limych/ha-average
 
