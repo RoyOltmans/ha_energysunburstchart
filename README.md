@@ -135,7 +135,7 @@ See for utility meter: https://www.home-assistant.io/integrations/utility_meter/
 
 Example sensor template For total energy Solar plus grid:
 ```yaml
-{{(states('sensor.consumed_and_produced_energy_grid') | float ) + (states('sensor.solar_energy_today_kwh') | float)}}
+{{(states('sensor.consumed_and_produced_energy_grid') | float(0,0) ) + (states('sensor.solar_energy_today_kwh') | float)}}
 ```
 
 Example sensor template for average energy via fossil fuel:
@@ -146,14 +146,14 @@ IMPORTANT: For an average sensor you will need an extra custom integration https
 
 Example sensor template for average energy via less-carbon fuel:
 ```yaml
-{{(states('sensor.consumed_and_produced_energy_grid') | float - ((states('sensor.consumed_and_produced_energy_grid') | float) * (states('sensor.average_grid_fossil_fuel_percentage') | float /100))) | round(2)}}
+{{(states('sensor.consumed_and_produced_energy_grid') | float(0,0) - ((states('sensor.consumed_and_produced_energy_grid') | float(0,0)) * (states('sensor.average_grid_fossil_fuel_percentage') | float /100))) | round(2)}}
 ```
 IMPORTANT: For an average sensor you will need an extra custom integration https://github.com/Limych/ha-average
 
 Example sensor template for average energy via less-carbon fuel:
 ```yaml
-{{((((states('sensor.electricity_meter_energy_consumption_tarif_1') | float) + (states('sensor.electricity_meter_energy_consumption_tarif_2') | float)) -
-((states('sensor.electricity_meter_energy_production_tarif_1') | float) + (states('sensor.electricity_meter_energy_production_tarif_2') | float)))/1000) | round(2)}}
+{{((((states('sensor.electricity_meter_energy_consumption_tarif_1') | float(0,0)) + (states('sensor.electricity_meter_energy_consumption_tarif_2') | float(0,0))) -
+((states('sensor.electricity_meter_energy_production_tarif_1') | float(0,0)) + (states('sensor.electricity_meter_energy_production_tarif_2') | float(0,0))))/1000) | round(2)}}
 ```
 IMPORTANT: To get accurate values you will need to use utility meter for energy consumption and production, because of offsync day measurements.
 
