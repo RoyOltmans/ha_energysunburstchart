@@ -84,8 +84,8 @@ class EnergySunburstCard extends HTMLElement {
     const layout = {
       margin: { t: 0, l: 0, r: 0, b: 0 },
       uniformtext: { minsize: 10, mode: "hide" },
-      paper_bgcolor: "rgba(255, 255, 255, 0.05)", // Match Home Assistant's theme
-      plot_bgcolor: "rgba(255, 255, 255, 0.05)", // Ensure background consistency
+      paper_bgcolor: "rgba(0,0,0,0)",
+      plot_bgcolor: "rgba(0,0,0,0)",
 	  transition: {
         duration: 200,
         easing: "cubic-in-out",
