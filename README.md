@@ -53,7 +53,7 @@ resources:
 Add the card to your Home Assistant dashboard with a configuration that suits your energy visualization needs:
 
 ```yaml
-type: custom:ha_energysunburstchart
+type: custom:energy-sunburst-card
 debug: false
 data:
   labels:
@@ -102,7 +102,7 @@ data:
 Add the card to your Home Assistant dashboard with a configuration that suits your energy visualization needs:
 
 ```yaml
-type: custom:ha_energysunburstchart
+type: custom:energy-sunburst-card
 debug: false
 data:
   labels:
