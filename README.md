@@ -14,6 +14,8 @@ This project provides a custom Home Assistant card that visualizes hierarchical 
  - Added transparant background
  - Debug several issues
  - Polished code Fixed following HA styling, transparancy, dark and light theme's
+## Update 2.3.5.1
+ - added HACS support
 
 ![preview](/images/preview.png)
 
